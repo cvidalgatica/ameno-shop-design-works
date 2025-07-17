@@ -9,34 +9,74 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 14% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 14% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 14% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 84% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 84% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 14% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 84% 95%;
+    --accent-foreground: 217 84% 52%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 217 84% 52%;
 
-    --radius: 0.5rem;
+    --success: 120 60% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 40 96% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Design system colors */
+    --navy: 220 30% 20%;
+    --navy-light: 220 30% 35%;
+    --gray-50: 220 15% 98%;
+    --gray-100: 220 15% 95%;
+    --gray-200: 220 15% 90%;
+    --gray-300: 220 15% 80%;
+    --gray-400: 220 9% 60%;
+    --gray-500: 220 9% 46%;
+    --gray-600: 220 14% 35%;
+    --gray-700: 220 14% 25%;
+    --gray-800: 220 14% 15%;
+    --gray-900: 220 30% 10%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--gray-50)), hsl(var(--gray-100)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--gray-50)) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px hsl(var(--gray-400) / 0.12);
+    --shadow-md: 0 4px 12px hsl(var(--gray-400) / 0.15);
+    --shadow-lg: 0 10px 30px hsl(var(--gray-400) / 0.20);
+    --shadow-xl: 0 20px 40px hsl(var(--gray-400) / 0.25);
+    --shadow-primary: 0 10px 30px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+
+    /* Animations */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +140,99 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200 px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border transition-colors duration-200 px-6 py-3 rounded-lg font-medium;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground hover:shadow-primary transition-all duration-300 px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .backdrop-blur-custom {
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
