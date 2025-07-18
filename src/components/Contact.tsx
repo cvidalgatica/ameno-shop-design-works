@@ -73,7 +73,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Ubicación",
-      content: "Ciudad de México, México",
+      content: "Santiago - Chile",
       link: "#"
     },
     {
