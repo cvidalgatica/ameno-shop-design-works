@@ -20,19 +20,19 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-400">
                 <Mail className="w-5 h-5 mr-3 text-primary" />
-                <a href="mailto:info@amenoestudio.com" className="hover:text-white transition-colors">
-                  info@amenoestudio.com
+                <a href="mailto:amenoestudio6@gmail.com" className="hover:text-white transition-colors">
+                  amenoestudio6@gmail.com
                 </a>
               </div>
               <div className="flex items-center text-gray-400">
                 <Phone className="w-5 h-5 mr-3 text-primary" />
-                <a href="tel:+525512345678" className="hover:text-white transition-colors">
-                  +52 55 1234 5678
+                <a href="https://wa.me/56988182328" className="hover:text-white transition-colors">
+                  +569 88182328
                 </a>
               </div>
               <div className="flex items-center text-gray-400">
                 <MapPin className="w-5 h-5 mr-3 text-primary" />
-                <span>Ciudad de México, México</span>
+                <span>Santiago - Chile</span>
               </div>
             </div>
           </div>
@@ -54,16 +54,6 @@ const Footer = () => {
               <li>
                 <a href="#servicios" className="hover:text-white transition-colors">
                   Diseño Responsive
-                </a>
-              </li>
-              <li>
-                <a href="#servicios" className="hover:text-white transition-colors">
-                  SEO & Marketing
-                </a>
-              </li>
-              <li>
-                <a href="#servicios" className="hover:text-white transition-colors">
-                  Desarrollo a Medida
                 </a>
               </li>
             </ul>
@@ -111,7 +101,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://wa.me/525512345678" 
+                  href="https://wa.me/56988182328" 
                   className="hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"

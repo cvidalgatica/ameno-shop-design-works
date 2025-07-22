@@ -61,25 +61,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@amenoestudio.com",
-      link: "mailto:info@amenoestudio.com"
+      content: "amenoestudio6@gmail.com",
+      link: "mailto:amenoestudio6@gmail.com"
     },
     {
       icon: Phone,
-      title: "Teléfono",
-      content: "+52 55 1234 5678",
-      link: "tel:+525512345678"
+      title: "WhatsApp",
+      content: "+569 88182328",
+      link: "https://wa.me/56988182328"
     },
     {
       icon: MapPin,
       title: "Ubicación",
       content: "Santiago - Chile",
-      link: "#"
-    },
-    {
-      icon: Clock,
-      title: "Horario",
-      content: "Lun - Vie: 9:00 - 18:00",
       link: "#"
     }
   ];
@@ -240,10 +234,6 @@ const Contact = () => {
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0" />
                     <span>Proyectos entregados en tiempo y forma</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0" />
-                    <span>Soporte técnico continuo</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0" />

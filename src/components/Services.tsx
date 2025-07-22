@@ -6,38 +6,26 @@ const Services = () => {
     {
       icon: ShoppingCart,
       title: "Tiendas Online",
-      description: "Desarrollamos e-commerce completos con carrito de compra, gestión de inventario y panel administrativo.",
-      features: ["Catálogo de productos", "Carrito de compra", "Gestión de inventario", "Panel de administración"]
+      description: "Desarrollamos e-commerce completos con carrito de compra y panel administrativo.",
+      features: ["Catálogo de productos", "Carrito de compra", "Panel de administración"]
     },
     {
       icon: CreditCard,
       title: "Pasarelas de Pago",
       description: "Integramos sistemas de pago seguros y confiables para que tus clientes compren sin complicaciones.",
-      features: ["PayPal", "Stripe", "Mercado Pago", "Transferencias bancarias"]
+      features: ["Webpay", "Mercado Pago", "Transferencias bancarias"]
     },
     {
       icon: Smartphone,
       title: "Diseño Responsive",
       description: "Todos nuestros sitios web se adaptan perfectamente a cualquier dispositivo móvil o desktop.",
-      features: ["Móvil optimizado", "Tablet friendly", "Desktop perfecto", "Velocidad optimizada"]
+      features: ["Móvil optimizado", "Tablet friendly", "Velocidad optimizada"]
     },
     {
       icon: Palette,
       title: "Diseño Personalizado",
       description: "Creamos diseños únicos que reflejan la identidad de tu marca y conectan con tus clientes.",
       features: ["Diseño único", "Identidad de marca", "UX/UI profesional", "Colores corporativos"]
-    },
-    {
-      icon: Code,
-      title: "Desarrollo a Medida",
-      description: "Desarrollamos funcionalidades específicas según las necesidades particulares de tu negocio.",
-      features: ["Funciones personalizadas", "Integraciones API", "Automatizaciones", "Escalabilidad"]
-    },
-    {
-      icon: TrendingUp,
-      title: "SEO & Marketing",
-      description: "Optimizamos tu sitio web para buscadores y te ayudamos a generar más ventas online.",
-      features: ["SEO optimizado", "Google Analytics", "Redes sociales", "Email marketing"]
     }
   ];
 
