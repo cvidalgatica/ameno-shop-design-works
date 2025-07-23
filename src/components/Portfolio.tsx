@@ -1,38 +1,48 @@
-import { ExternalLink, ShoppingCart, Globe, Utensils } from "lucide-react";
+import { ExternalLink, ShoppingCart, Globe, FileText, Heart } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
+import portafolio1 from "@/assets/portafolio1.png";
+import portafolio2 from "@/assets/portafolio2.png";
+import portafolio3 from "@/assets/portafolio3.png";
+import portafolio4 from "@/assets/portafolio4.png";
 
 const Portfolio = () => {
   const projects = [
     {
-      title: "TechShop Pro",
+      title: "Imprenta Atenas",
       category: "E-commerce",
-      description: "Tienda online de tecnología con más de 500 productos, carrito de compra avanzado y múltiples métodos de pago.",
-      image: portfolio1,
+      description: "Sitio web para empresa de servicios de imprenta.",
+      image: portafolio1,
       icon: ShoppingCart,
-      technologies: ["React", "Stripe", "PayPal", "Inventory Management"],
-      features: ["Carrito avanzado", "Pagos seguros", "Gestión de inventario", "Panel admin"]
+      technologies: ["Wordpress", "Woocommerce", "Webpay"],
+      features: ["Carrito de compra", "Integración Webpay"]
     },
     {
-      title: "Consultora Empresarial",
+      title: "Megalabs",
       category: "Sitio Corporativo",
-      description: "Sitio web profesional para consultora empresarial con sistema de citas y formularios de contacto.",
-      image: portfolio2,
+      description: "Sitio web para empresa de una farmacéutica de Latinoamérica con visión global enfocada en la producción de soluciones terapéuticas seguras confiables y accesibles. Colaboración para D8.",
+      image: portafolio2,
       icon: Globe,
-      technologies: ["WordPress", "Contact Forms", "Booking System", "CRM"],
-      features: ["Sistema de citas", "Formularios", "Blog corporativo", "CRM integrado"]
+      technologies: ["Wordpress"],
+      features: ["Sitio autoadministrable", "Blog corporativo"]
     },
     {
-      title: "Sabores del Mar",
-      category: "Restaurante",
-      description: "Sitio web para restaurante con menú digital, sistema de pedidos online y reservas de mesa.",
-      image: portfolio3,
-      icon: Utensils,
-      technologies: ["Next.js", "Online Orders", "Table Booking", "Menu Management"],
-      features: ["Menú digital", "Pedidos online", "Reservas", "Delivery integrado"]
+      title: "Box Solution",
+      category: "E-commerce",
+      description: "Sitio web para empresa que ofrece soluciones de agua caliente, climatización y ferretería. Colaboración para D8.",
+      image: portafolio3,
+      icon: ShoppingCart,
+      technologies: ["Wordpress", "Woocommerce", "Webpay"],
+      features: ["Sitio autoadministrable", "Blog corporativo", "Carrito de compra", "Integración Webpay"]
+    },
+    {
+      title: "Medical Growth",
+      category: "Landing Page",
+      description: "Sitio web para empresa que ofrece una solución integral que incorpore marketing digital, automatización de procesos y seguimiento post-consulta para mejorar la conversión, la lealtad y la retención de pacientes en el sector salud.",
+      image: portafolio4,
+      icon: Heart,
+      technologies: ["Wordpress"],
+      features: ["Sitio autoadministrable"]
     }
   ];
 
@@ -49,7 +59,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={index} 

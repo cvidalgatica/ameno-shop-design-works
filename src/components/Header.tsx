@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo-amenoestudio.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,7 +33,7 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
+          ? 'bg-black shadow-lg border-b border-gray-800' 
           : 'bg-transparent'
       }`}
     >
@@ -43,10 +44,11 @@ const Header = () => {
             className="flex items-center cursor-pointer"
             onClick={() => scrollToSection('inicio')}
           >
-            <Sparkles className={`w-6 h-6 mr-2 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
-            <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              Ameno Estudio
-            </span>
+            <img 
+              src={logo} 
+              alt="Ameno Estudio" 
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -56,7 +58,7 @@ const Header = () => {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`font-medium transition-colors duration-200 hover:opacity-80 ${
-                  isScrolled ? 'text-gray-700' : 'text-white/90'
+                  isScrolled ? 'text-white' : 'text-white/90'
                 }`}
               >
                 {item.name}
@@ -67,7 +69,7 @@ const Header = () => {
               onClick={() => scrollToSection('contacto')}
               className={`${
                 isScrolled 
-                  ? 'bg-gray-900 text-white hover:bg-gray-800' 
+                  ? 'bg-white text-black hover:bg-gray-200' 
                   : 'bg-white text-gray-900 hover:bg-white/90'
               } transition-colors duration-200`}
             >
@@ -77,7 +79,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 ${isScrolled ? 'text-gray-900' : 'text-white'}`}
+            className={`md:hidden p-2 ${isScrolled ? 'text-white' : 'text-white'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -101,7 +103,7 @@ const Header = () => {
               <div className="px-3 py-2">
                 <Button 
                   onClick={() => scrollToSection('contacto')}
-                  className="w-full bg-gray-900 text-white hover:bg-gray-800"
+                  className="w-full bg-black text-white hover:bg-gray-800"
                 >
                   Comenzar Proyecto
                 </Button>
